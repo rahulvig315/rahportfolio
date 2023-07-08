@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# vs ode generated .history
+.history
+
+# vscode
+.vscode
+
+#.hintrc
+.hintrc
