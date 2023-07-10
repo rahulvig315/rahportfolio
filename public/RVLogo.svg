@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="RahulVigLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 823.78 884.76">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Condor-Regular, Condor;
+        font-size: 67.7px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-size: 710.81px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: Condor-ExtraLightItalic, Condor;
+        font-style: italic;
+        font-weight: 200;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-size: 507.72px;
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <g id="Component_4_1" data-name="Component 4 1">
+    <text class="cls-2" transform="translate(0 617.7)"><tspan x="0" y="0" xml:space="preserve"> R</tspan></text>
+    <text class="cls-3" transform="translate(460.91 784.21) rotate(-15.23) skewX(-.27)"><tspan x="0" y="0">V</tspan></text>
+    <text class="cls-1" transform="translate(140.81 705.85) rotate(-.77) scale(1.03 1)"><tspan class="cls-4" x="0" y="0">R</tspan><tspan class="cls-5" x="45.29" y="0">AHU</tspan><tspan class="cls-7" x="187.18" y="0">L</tspan><tspan class="cls-6" x="222.72" y="0"> </tspan><tspan class="cls-5" x="237" y="0">VIG</tspan></text>
+  </g>
+</svg>
