@@ -3,23 +3,23 @@ import Image from 'next/image';
 const defaultLogoMeta = {
     alt: 'Rahul Vig Logo',
     src: '/RVLogo.svg',
-    size: 100,
+    size: 400,
 }
 
 const defaultLandingClasses = {
-    section: "w-screen h-screen border",
-    header: "",
-    backgroundImage: "object-cover object-left w-full h-full",
-    content: "",
-    logo: "",
-    title: "",
-    subtitle: "",
-    button: "",
+    section: "flex w-full h-screen justify-center text-center items-center",
+    header: "border border-black",
+    backgroundImage: "",
+    content: "max-w-[600px]",
+    logo: "m-auto",
+    title: "text-3xl lg:text-5xl font-thin",
+    subtitle: "text-lg font-extralight m-3 line-clamp-3",
+    button: "bg-black text-white px-3 py-1 m-3 rounded",
 }
 
 const defaultLandingImageMeta = {
     alt: 'Landing Background.',
-    src: '/backgrounds/landing.jpg'
+    src: '/backgrounds/landing.png'
 }
 
 const defaultButtonMeta = {
@@ -55,15 +55,16 @@ function Landing({
     return (
         <section className={`${classes?.section}`}>
             <header className={classes?.header}>
-                <Image src={backgroundImageMeta?.src} alt={backgroundImageMeta?.alt} className={classes?.backgroundImage} fill={true} />
+                {/* <Image src={backgroundImageMeta?.src} alt={backgroundImageMeta?.alt} className={classes?.backgroundImage} fill={true} /> */}
                 <div className={classes?.content}>
-                    <Image src={logoMeta?.src} width={logoMeta?.size} height={logoMeta?.size} alt={logoMeta?.alt} className={classes?.logoMeta} />
+                    <Image src={logoMeta?.src} width={logoMeta?.size} height={logoMeta?.size} alt={logoMeta?.alt} className={classes?.logo} />
                     <h1 className={classes?.title}>Welcome Friend</h1>
                     <h2 className={classes?.subtitle}>
                         Come learn about my journey as a professional{" "}
-                        <span>developer</span>,{' '}<span>designer</span>,{''}
-                        <span>illustrator</span>, <span>animator</span> & <span>technologist</span>.
+                        <span>developer</span>,{" "}<span>designer</span>,{" "}
+                        <span>illustrator</span>,{" "}<span>animator</span>{" "}& <span>technologist</span>.
                     </h2>
+                    <button className={classes?.button}>Explore</button>
                 </div>
             </header>
         </section >
