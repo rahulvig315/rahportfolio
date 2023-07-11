@@ -1,28 +1,72 @@
 import Image from 'next/image';
-import styles from './Landing.module.css';
 
-
-const logoMeta = {
+const defaultLogoMeta = {
     alt: 'Rahul Vig Logo',
     src: '/RVLogo.svg',
-    width: 100,
-    height: 100,
+    size: 100,
 }
-const logoAlt = 'Rahul Vig Logo';
 
+const defaultLandingClasses = {
+    section: "w-screen h-screen border",
+    header: "",
+    backgroundImage: "object-cover object-left w-full h-full",
+    content: "",
+    logo: "",
+    title: "",
+    subtitle: "",
+    button: "",
+}
 
-function Landing() {
+const defaultLandingImageMeta = {
+    alt: 'Landing Background.',
+    src: '/backgrounds/landing.jpg'
+}
+
+const defaultButtonMeta = {
+    label: "Explore",
+    icon: undefined,
+    onClick: () => null,
+}
+
+const defaultLandingProps = {
+    logoMeta: defaultLogoMeta,
+    backgroundImageMeta: defaultLandingImageMeta,
+    buttonMeta: {},
+    classes: {
+        ...defaultLandingClasses
+    },
+}
+
+type LandingProps = {
+    classes: {
+        [elementClass: string]: string;
+    },
+    backgroundImageMeta: any;
+    logoMeta: any;
+    buttonMeta: any;
+}
+
+function Landing({
+    classes = defaultLandingProps.classes,
+    backgroundImageMeta = defaultLandingProps.backgroundImageMeta,
+    logoMeta = defaultLandingProps.logoMeta,
+    buttonMeta = defaultLandingProps.buttonMeta
+}: Partial<LandingProps> = defaultLandingProps) {
     return (
-        <>        <section className={styles.landing}>
-            <div className={styles.contentWrapper}>
-                <Image src={logoMeta.src} alt={logoMeta.alt} width={logoMeta.width} height={logoMeta.height} className={styles.logo} />
-            </div>
-        </section >
-            <section className={styles.landing}>
-                <div className={styles.contentWrapper}>
-                    <Image src={logoMeta.src} alt={logoMeta.alt} width={logoMeta.width} height={logoMeta.height} className={styles.logo} priority />
+        <section className={`${classes?.section}`}>
+            <header className={classes?.header}>
+                <Image src={backgroundImageMeta?.src} alt={backgroundImageMeta?.alt} className={classes?.backgroundImage} fill={true} />
+                <div className={classes?.content}>
+                    <Image src={logoMeta?.src} width={logoMeta?.size} height={logoMeta?.size} alt={logoMeta?.alt} className={classes?.logoMeta} />
+                    <h1 className={classes?.title}>Welcome Friend</h1>
+                    <h2 className={classes?.subtitle}>
+                        Come learn about my journey as a professional{" "}
+                        <span>developer</span>,{' '}<span>designer</span>,{''}
+                        <span>illustrator</span>, <span>animator</span> & <span>technologist</span>.
+                    </h2>
                 </div>
-            </section ></>
+            </header>
+        </section >
     )
 }
 
