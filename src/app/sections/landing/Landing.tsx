@@ -1,33 +1,29 @@
-"use client";
+'use client';
 import { easeIn, motion } from 'framer-motion';
 import Image from 'next/image';
+
 
 const defaultLogoMeta = {
     alt: 'Rahul Vig Logo',
     src: '/RVLogo.svg',
-    size: 400,
+    size: 300,
 }
+
 
 const defaultLandingClasses = {
-    section: "flex h-screen bg-gray-500/30 overflow-y-hidden",
-    backgroundImage: "z-[-1] object-cover object-center w-screen h-screen",
-    content: "bg-white/30 lg:bg-transparent h-screen drop-shadow-2xl  shadow-amber-100 shadow-xl backdrop-blur-md flex flex-col justify-center items-center text-center max-w-[600px]",
-    logo: "m-auto",
-    title: "text-5xl lg:text-6xl font-extralight text-black",
-    subtitle: "text-md lg:text-md p-5 leading-relaxed",
-    link: "bg-zinc-900 rounded font-semibold text-slate-100 uppercase px-7 py-3",
-    wrapper: 'flex flex-col justify-center items-center h-full',
-    emphasis: 'underline font-semibold animate-pulse',
-    divider: 'border-1 border-amber-100 w-full'
-}
-
-const defaultLandingImageMeta = {
-    alt: 'Landing Background.',
-    src: '/images/landing.jpg'
+    section: `w-full h-screen flex  bg-[url('/background/bg-landing.jpg')] bg-cover bg-bottom text-center justify-center  bg-fixed bg-cover bg-center`,
+    content: 'bg-white/30 flex flex-col md:flex-row justify-center items-center shadow shadow-2xl drop-shadow-2xl rounded-b-xl w-fit h-fit backdrop-blur-sm',
+    logo: 'm-auto border-b border-x rounded-b-xl md:rounded-b-none md:rounded-bl-xl border-gray-100/20 shadow shadow-2xl drop-shadow-2xl',
+    title: 'text-3xl font-bold  text-zinc-900',
+    subtitle: 'text-lg font-light',
+    link: 'text-md bg-zinc-950  text-white uppercase rounded-lg px-5 py-2 font-bold',
+    wrapper: 'max-w-[500px] flex flex-col gap-5 p-7',
+    emphasis: 'italic',
+    divider: 'border-black/10'
 }
 
 const defaultLinkMeta = {
-    label: "Explore",
+    label: 'Explore',
     icon: undefined,
     src: '#about',
 }
@@ -78,7 +74,6 @@ const animations = {
 
 const defaultLandingProps = {
     logoMeta: defaultLogoMeta,
-    backgroundImageMeta: defaultLandingImageMeta,
     linkMeta: defaultLinkMeta,
     classes: { ...defaultLandingClasses },
     animations: {
@@ -97,23 +92,14 @@ type LandingProps = {
     animations: any
 }
 
-
 function Landing({
     classes = defaultLandingProps.classes,
-    backgroundImageMeta = defaultLandingProps.backgroundImageMeta,
     logoMeta = defaultLandingProps.logoMeta,
     linkMeta = defaultLandingProps.linkMeta,
     animations = defaultLandingProps.animations
 }: Partial<LandingProps> = defaultLandingProps) {
     return (
-        <section className={classes?.section}>
-            <Image
-                src={backgroundImageMeta?.src}
-                alt={backgroundImageMeta?.alt}
-                className={classes?.backgroundImage}
-                priority
-                fill={true}
-            />
+        <section className={`${classes?.section}`}>
             <motion.div
                 initial={animations?.content?.initial}
                 animate={animations?.content?.animate}
@@ -132,7 +118,6 @@ function Landing({
                         className={classes?.logo}
                     />
                 </motion.div>
-                <hr className={classes?.divider} />
                 <motion.div
                     initial={animations.text.initial}
                     animate={animations.text.animate}
@@ -140,12 +125,14 @@ function Landing({
                     className={classes.wrapper}
                 >
                     <h1 className={classes?.title}>Welcome Friend.</h1>
+                    <hr className={classes?.divider} />
                     <p className={classes?.subtitle}>
-                        Come learn about my journey as a{" "}
+                        Come learn about my journey as a{' '}
                         <span className={classes?.emphasis}>developer</span>,
-                        {" "}<span className={classes?.emphasis}>designer</span>,{" "}
-                        <span className={classes?.emphasis}>illustrator</span>,{" "}<span className={classes?.emphasis}>animator</span>{" "}&{" "}<span className={classes?.emphasis}>technologist</span>.
+                        {' '}<span className={classes?.emphasis}>designer</span>,{' '}
+                        <span className={classes?.emphasis}>illustrator</span>,{' '}<span className={classes?.emphasis}>animator</span>{' '}&{' '}<span className={classes?.emphasis}>technologist</span>.
                     </p>
+                    <hr className={classes?.divider} />
                     <a className={classes?.link} href={linkMeta.src}>
                         {linkMeta.label}
                     </a>
