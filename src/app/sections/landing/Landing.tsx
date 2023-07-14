@@ -6,20 +6,20 @@ import Image from 'next/image';
 const defaultLogoMeta = {
     alt: 'Rahul Vig Logo',
     src: '/RVLogo.svg',
-    size: 300,
+    size: 350,
 }
 
 
 const defaultLandingClasses = {
-    section: `w-full h-screen flex  bg-[url('/background/bg-landing.jpg')] bg-cover bg-bottom text-center justify-center  bg-fixed bg-cover bg-center`,
-    content: 'bg-white/30 flex flex-col md:flex-row justify-center items-center shadow shadow-2xl drop-shadow-2xl rounded-b-xl w-fit h-fit backdrop-blur-sm',
-    logo: 'm-auto border-b border-x rounded-b-xl md:rounded-b-none md:rounded-bl-xl border-gray-100/20 shadow shadow-2xl drop-shadow-2xl',
-    title: 'text-3xl font-bold  text-zinc-900',
-    subtitle: 'text-lg font-light',
-    link: 'text-md bg-zinc-950  text-white uppercase rounded-lg px-5 py-2 font-bold',
-    wrapper: 'max-w-[500px] flex flex-col gap-5 p-7',
-    emphasis: 'italic',
-    divider: 'border-black/10'
+    section: `w-full h-screen flex bg-[url('/background/bg-landing.jpg')] bg-fixed bg-cover bg-center justify-center xl:justify-start overflow-none`,
+    content: 'w-fit h-full flex flex-col backdrop-blur-md text-center justify-center shadow-2xl drop-shadow-2xl p-7',
+    logo: 'm-auto',
+    title: 'text-2xl font-bold  text-zinc-900 font-bold',
+    subtitle: 'font-extralight',
+    link: 'text-md bg-zinc-950  text-white uppercase rounded-lg px-5 py-2 font-bold text-sm',
+    wrapper: 'max-w-[400px] flex flex-col gap-5',
+    emphasis: 'italic underline',
+    divider: 'border-gray/10'
 }
 
 const defaultLinkMeta = {
