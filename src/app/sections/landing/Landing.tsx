@@ -12,11 +12,11 @@ const defaultLogoMeta = {
 
 const defaultLandingClasses = {
     section: `w-full h-screen flex bg-[url('/background/bg-landing.jpg')] bg-fixed bg-cover bg-center justify-center xl:justify-start overflow-none`,
-    content: 'w-fit h-full flex flex-col backdrop-blur-md text-center justify-center shadow-2xl drop-shadow-2xl p-7',
-    logo: 'm-auto',
-    title: 'text-2xl font-bold  text-zinc-900 font-bold',
+    content: 'w-fit h-full flex flex-col backdrop-blur-md text-center justify-center shadow-2xl drop-shadow-2xl p-5',
+    logo: 'm-auto mt-[-15%]',
+    title: 'text-2xl font-bold  text-zinc-900 font-semibold',
     subtitle: 'font-extralight',
-    link: 'text-md bg-zinc-950  text-white uppercase rounded-lg px-5 py-2 font-bold text-sm',
+    link: 'text-md bg-zinc-950  text-white uppercase rounded-lg px-5 py-2 font-bold text-sm w-full m-auto',
     wrapper: 'max-w-[400px] flex flex-col gap-5',
     emphasis: 'italic underline',
     divider: 'border-gray/10'

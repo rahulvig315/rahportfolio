@@ -1,6 +1,6 @@
 
 const defaultAboutClasses = {
-    section: "flex w-full h-screen justify-center text-center items-center bg-cover bg-top",
+    section: "flex w-full h-screen justify-center text-center items-center bg-cover bg-top  top-0 z-0 bg-fixed  bg-[url('/background/bg-about.jpg')]",
 }
 
 
@@ -10,6 +10,5 @@ type AboutProps = {
 
 
 export default function About({ classes = defaultAboutClasses }: AboutProps) {
-    return (<section id="about" className={`${classes?.section}
-    bg-[url('/background/bg-about.jpg')]`}>About</section>)
+    return (<section id="about" className={`${classes?.section}`}></section>)
 }
