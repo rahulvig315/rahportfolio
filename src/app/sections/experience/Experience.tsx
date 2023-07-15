@@ -1,6 +1,6 @@
 
 const defaultExperienceClasses = {
-    section: "flex w-full h-screen justify-center text-center items-center",
+    section: "flex bg-fixed w-full h-screen bg-cover bg-left justify-center z-0  bg-[url('/background/bg-experience.jpg')]",
 }
 
 
@@ -10,5 +10,5 @@ type ExperienceProps = {
 
 
 export default function Experience({ classes = defaultExperienceClasses }: ExperienceProps) {
-    return (<section className={classes?.section}>Experience</section>)
+    return (<section id="experience" className={classes?.section}>Experience</section>)
 }

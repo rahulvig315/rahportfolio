@@ -1,6 +1,6 @@
 
 const defaultContactClasses = {
-    section: "flex w-full h-screen justify-center text-center items-center",
+    section: "flex bg-fixed w-full h-screen bg-cover bg-center justify-center z-0  bg-[url('/background/bg-contact.jpg')]",
 }
 
 
@@ -10,5 +10,5 @@ type ContactProps = {
 
 
 export default function Contact({ classes = defaultContactClasses }: ContactProps) {
-    return (<section className={classes?.section}>Contact</section>)
+    return (<section id="contact" className={classes?.section}>Contact</section>)
 }

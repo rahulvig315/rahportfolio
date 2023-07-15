@@ -1,6 +1,6 @@
 
 const defaultProjectsClasses = {
-    section: "flex w-full h-screen justify-center text-center items-center",
+    section: "flex bg-fixed w-full h-screen bg-cover bg-bottom justify-center z-0  bg-[url('/background/bg-projects.jpg')]",
 }
 
 
@@ -10,5 +10,5 @@ type ProjectsProps = {
 
 
 export default function Projects({ classes = defaultProjectsClasses }: ProjectsProps) {
-    return (<section className={classes?.section}>Projects</section>)
+    return (<section id="projects" className={classes?.section}>Projects</section>)
 }
