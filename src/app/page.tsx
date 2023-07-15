@@ -21,6 +21,9 @@ export default function Home() {
         <Projects />
         <Experience />
         <Contact />
+        <footer className="w-full text-center bg-zinc-950/90 text-white shadow-2xl drop-shadow-2xl p-5">
+          Rahul Vig
+        </footer>
       </div>
     </main>
   )
