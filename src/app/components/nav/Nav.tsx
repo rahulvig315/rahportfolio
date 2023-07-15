@@ -3,7 +3,7 @@ import Image from "next/image";
 function Nav() {
 
   return (
-    <nav className=" w-full sticky top-0  z-10 ">
+    <nav className=" w-full sticky top-0  z-10 backdrop-blur-lg">
       <button type='button' name="hamburger" className="md:hidden p-5">
         <svg viewBox='0 0 20 20' fill='currentColor' className='menu w-6 h-6'>
           <path fillRule='evenodd'
@@ -12,15 +12,15 @@ function Nav() {
         </svg>
       </button>
       <hr className="md:hidden" />
-      <div className='hidden md:flex md:flex-row w-full h-fit backdrop-blur-xl justify-start items-center  text-center shadow-2xl drop-shadow-2xl bg-white/10  shadow-black text-md font-extralight rounded'>
-        <Image src='/RVLogo.svg' width={50} height={50} alt={""} />
+      <div className='hidden md:flex md:flex-row w-full h-fit justify-start items-center  text-center shadow-2xl drop-shadow-2xl shadow-black text-sm font-light rounded bg-white/10'>
+        <Image src='/RVLogo.svg' width={40} height={40} alt={""} className="p-1" />
 
         <ul className="flex justify-around w-full cursor-pointer">
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Experience</li>
-          <li>Contact</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
